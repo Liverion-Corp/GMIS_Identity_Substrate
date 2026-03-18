@@ -1,0 +1,17 @@
+flowchart LR
+    A[Governance Authority] -->|Issues Identity| B[Identity Object]
+
+    B --> C[Globally Unique Identifier]
+    B --> D[Governance Authority Identifier]
+    B --> E[Creation Timestamp]
+    B --> F[Lifecycle State]
+
+    B --> G[Optional Metadata]
+    G --> G1[Machine-Class Metadata]
+    G --> G2[Jurisdictional Metadata]
+    G --> G3[Delegation Metadata]
+
+    B -.-> H[Cryptographic Material]
+    H:::note
+
+    classDef note fill:#f5f5f5,stroke:#999,stroke-dasharray: 3 3,color:#333;

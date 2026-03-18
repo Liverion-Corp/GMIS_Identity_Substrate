@@ -1,0 +1,36 @@
+stateDiagram-v2
+    [*] --> Issued
+
+    Issued --> Active
+    Active --> Suspended
+    Suspended --> Active
+
+    Active --> Revoked
+    Active --> Retired
+
+    Revoked --> [*]
+    Retired --> [*]
+
+    note right of Issued
+        Identity created under a
+        recognized governance authority
+    end note
+
+    note right of Active
+        Identity valid and permitted
+        to participate in governed operations
+    end note
+
+    note right of Suspended
+        Identity temporarily restricted
+        but not revoked
+    end note
+
+    note right of Revoked
+        Identity permanently invalidated
+    end note
+
+    note right of Retired
+        Identity lifecycle completed
+        without revocation
+    end note
